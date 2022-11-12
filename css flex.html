@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex 布局</title>
+    <style>
+      body {
+        margin: 0%;
+        height: 100vh;
+        background-color: #eee;
+      }
+      /* * {
+        border: 1px solid;
+      } */
+      .yinying {
+        box-shadow: inset;
+      }
+      .flex {
+        display: flex;
+      }
+      .qinse {
+        background-color: rgb(204, 241, 241);
+      }
+      .danlvse {
+        background-color: rgb(204, 243, 192);
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 9px;
+      }
+      .mgt8 {
+        margin-top: 9px;
+      }
+      .mgl8 {
+        margin-left: 9px;
+      }
+      .mgr8 {
+        margin-right: 9px;
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!-- 侧边栏-->
+    <div style="width: 200px" class="qinse"></div>
+    <!-- 主区域-->
+    <div class="flex1 flex column">
+      <!-- 主区域头部栏-->
+      <div style="height: 60px" class="danlvse"></div>
+      <!-- 主区域内容区-->
+      <div style="overflow: auto" class="flex1 flex">
+        <!-- 左区-->
+        <div style="flex: 3" class="flex column mg8">
+          <!-- 数据区-->
+          <div class="flex">
+            <!--数据块-->
+            <div style="height: 100px" class="flex1 qinse mgr8"></div>
+            <div style="height: 100px" class="flex1 qinse mgr8"></div>
+            <div style="height: 100px" class="flex1 qinse mgr8"></div>
+            <div style="height: 100px" class="flex1 qinse"></div>
+          </div>
+          <!-- 列表区-->
+          <div class="flex column mgt8">
+            <div style="height: 160px" class="qinse"></div>
+            <div style="height: 160px" class="qinse"></div>
+            <div style="height: 160px" class="qinse"></div>
+          </div>
+        </div>
+        <!-- 右区-->
+        <div style="flex: 1" class="flex column mgr8 mgt8">
+          <!-- 提示区-->
+          <div style="height: 150px" class="qinse"></div>
+          <!-- 消息区-->
+          <div style="height: 350px" class="qinse"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
